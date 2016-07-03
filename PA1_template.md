@@ -30,7 +30,7 @@ hist( sd$steps, breaks = 10, col="green", xlab = "Steps",
       main = "Historgram of total steps per day (before imputing)")
 ```
 
-![](PA1_template_files/figure-html/totalperday-1.png)<!-- -->
+![](figure/totalperday-1.png)<!-- -->
 
 ```r
 # 3. Calculate and report the mean and median of the total number of steps taken per day
@@ -54,7 +54,7 @@ plot( strptime( mi$interval, '%H:%M' ), mi$steps, type="o", col="blue", pch=20,
 grid()
 ```
 
-![](PA1_template_files/figure-html/avgdailypattern-1.png)<!-- -->
+![](figure/avgdailypattern-1.png)<!-- -->
 
 ```r
 #2. Which 5-minute interval, on average across all days, contains the maximum number of steps
@@ -98,7 +98,7 @@ hist( sd$steps, breaks = 10, col="green", xlab = "Steps",
       main = "Historgram of total steps per day (after imputing)")
 ```
 
-![](PA1_template_files/figure-html/imputing-1.png)<!-- -->
+![](figure/imputing-1.png)<!-- -->
 
 ```r
 summary( sd$steps )[ 3 : 4 ]
@@ -126,6 +126,6 @@ xyplot( steps ~ as.numeric(interval) | day, data = mi, layout = c( 1, 2 ), type 
         xlab = "5-min interval number (1-288)", main = "Average number of steps: weekdays vs. weekends")
 ```
 
-![](PA1_template_files/figure-html/weekdaysvsweekends-1.png)<!-- -->
+![](figure/weekdaysvsweekends-1.png)<!-- -->
 
 There are some obvious differences between weekday and weekend patterns. For example, people wake up and go to bed earlier during weekdays, also the walking pattern is spread more evenly throughout the day during the weekends, as opposed to a clear spike in the morning during the weekdays (most likely associated with people going to work). 
